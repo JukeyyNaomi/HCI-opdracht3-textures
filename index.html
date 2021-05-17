@@ -9,30 +9,27 @@
   </head>
   <body>
     <a-scene background="color: #333333">
-      <a-box id="myBox"
-        width="5"
-        height="1"
-        depth="4"
-        position="0 1.6 -5"
-        rotation="20 50 0"
-        scale="2"
-        color="#2ba09f" 
+      <a-assets>
+          <img id="wood" src="images/wood.jpg" />
+          
+      </a-assets>
+      <a-box id="myBox" 
+        position="0 1 -3" 
+        rotation="0 45 0" 
+        width="3" 
+        height="1" 
+        depth="1" 
+        material="src: #wood"
         shadow>
       </a-box>
-      <a-circle id="myBox"
-        width="5"
-        depth="4"
-        color="yellow"
+      <a-plane id="ground"
+        position="0 0 -4" 
+        rotation="-90 0 0" 
+        width="100" 
+        height="100" 
+        color="#7BC8A4" 
         shadow>
-      </a-circle>
-      <a-sphere position="4 0 0" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-tetrahedron
-        position="-3 3 -2"
-        color="hotpink"
-      ></a-tetrahedron>
-      <a-sky color="navy"></a-sky>
-      
+      </a-plane> 
     </a-scene>
   </body>
 </html>
